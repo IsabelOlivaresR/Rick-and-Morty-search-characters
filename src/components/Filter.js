@@ -19,6 +19,7 @@ class Filter extends React.Component {
           name='search'
           className='search-bar'
           placeholder='Introduce un personaje'
+          value={this.props.filterSearch}
           onChange={this.getValueFromSearchChild}
         />
       </form>

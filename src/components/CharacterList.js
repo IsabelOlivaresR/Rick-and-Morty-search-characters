@@ -1,18 +1,20 @@
 import React from 'react';
-import Character from './Character';
+import CharacterCard from './CharacterCard';
+import { Link } from 'react-router-dom';
 
 const CharacterList = (props) => {
   const character = props.list.map((item, id) => {
     return (
       <li className='character_container' key={item.id}>
-        <Character item={item} />
+        <Link to={`/character/${item.id}`}>
+          <CharacterCard item={item} />
+        </Link>
       </li>
     );
   });
   console.log(character);
   return (
     <div>
-      <h1 className='page_title'>Mis series</h1>
       <ul className='character_info'>{character}</ul>
     </div>
   );
