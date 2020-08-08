@@ -12,12 +12,11 @@ class Filter extends React.Component {
 
   render() {
     return (
-      <form>
-        <label>Busca un personaje</label>
+      <form className='form' onSubmit={(event) => event.preventDefault()}>
         <input
           type='text'
           name='search'
-          className='search-bar'
+          className='form__searchBar'
           placeholder='Introduce un personaje'
           value={this.props.filterSearch}
           onChange={this.getValueFromSearchChild}

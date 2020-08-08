@@ -1,0 +1,192 @@
+.page {
+  background-image: url('../images/espacio3.jpg');
+}
+
+//Header
+.header {
+  width: 100%;
+  margin-top: 30px;
+  padding: 25px;
+  &__img {
+    width: 100%;
+  }
+}
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+
+  &__searchBar {
+    width: 280px;
+    height: 40px;
+    font-family: 'Creepster', cursive;
+    text-align: center;
+    border: 1px solid #26f730;
+    margin-bottom: 30px;
+    @media all and (min-width: 768px) {
+      width: 400px;
+      height: 50px;
+    }
+    @media all and (min-width: 1200px) {
+      width: 600px;
+      height: 60px;
+    }
+  }
+}
+
+//Cards
+.characters__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media all and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 45px;
+    justify-items: center;
+  }
+  @media all and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 45px;
+  }
+}
+.characterCard_container {
+  border-radius: 50%;
+  margin-bottom: 30px;
+  &:hover {
+    border: solid 3px #26f730;
+  }
+}
+.characterCard {
+  background-color: rgba(114, 38, 114, 0.3);
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 325px;
+  height: 325px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  @media all and (min-width: 768px) {
+    margin: 15px;
+  }
+
+  &__img {
+    width: 140px;
+    border-radius: 30px;
+  }
+  &__name {
+    font-family: 'Creepster', cursive;
+    color: #26f730;
+    font-size: 40px;
+    text-align: center;
+  }
+  &__species {
+    font-family: 'Creepster', cursive;
+    color: white;
+    font-size: 30px;
+    width: 38px;
+  }
+}
+// CharacterDetails
+.character_container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fas {
+  color: #26f730;
+  font-size: 40px;
+  text-align: right;
+  margin-bottom: 20px;
+  @media all and (min-width: 768px) {
+    font-size: 50px;
+  }
+  @media all and (min-width: 1200px) {
+    font-size: 60px;
+  }
+}
+.characterDetail {
+  width: 300px;
+  height: 420px;
+  background-color: rgba(114, 38, 114, 0.3);
+  border: 2px solid white;
+  font-family: 'Creepster', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  @media all and (min-width: 768px) {
+    width: 550px;
+    height: 700px;
+  }
+  @media all and (min-width: 1200px) {
+    width: 700px;
+    height: 900px;
+  }
+
+  &__img {
+    width: 200px;
+    @media all and (min-width: 768px) {
+      width: 300px;
+    }
+    @media all and (min-width: 1200px) {
+      width: 400px;
+    }
+  }
+  &__name {
+    font-size: 30px;
+    color: #26f730;
+    @media all and (min-width: 768px) {
+      font-size: 55px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 70px;
+    }
+  }
+  &__paragraph {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    @media all and (min-width: 768px) {
+      font-size: 40px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 55px;
+    }
+  }
+  &__icon {
+    width: 40px;
+    @media all and (min-width: 768px) {
+      width: 65px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 80px;
+    }
+  }
+}
+.ripIcon {
+  width: 40px;
+  @media all and (min-width: 768px) {
+    width: 65px;
+  }
+  @media all and (min-width: 1200px) {
+    font-size: 80px;
+  }
+}
+.searchAlert {
+  font-family: 'Creepster', cursive;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  line-height: 45px;
+  margin-top: 40px;
+}

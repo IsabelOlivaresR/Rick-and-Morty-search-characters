@@ -1,17 +1,22 @@
 import React from 'react';
-
+import Human from '../images/human.png';
+import Alien from '../images/alien.png';
 class CharacterCard extends React.Component {
   render() {
     console.log(this.props);
     return (
-      <div className='character_info'>
+      <div className='characterCard'>
         <img
-          className='character_img'
+          className='characterCard__img'
           src={this.props.item.image}
           alt={this.props.item.name}
         />
-        <h2 className='character_name'>{this.props.item.name}</h2>
-        <p className='character_species'>{this.props.item.species}</p>
+        <h2 className='characterCard__name'>{this.props.item.name}</h2>
+        <img
+          className='characterCard__species'
+          src={this.props.item.species === 'Human' ? [Human] : [Alien]}
+          alt='holi'
+        />
       </div>
     );
   }

@@ -1,10 +1,10 @@
 import React from 'react';
+import Header from './Header';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
 import Filter from './Filter';
 import getDataFromApi from '../services/data';
 import { Route, Switch } from 'react-router-dom';
-import Logo from '../images/Rick_and_Morty_-_logo_(English).png';
 
 class App extends React.Component {
   constructor(props) {
@@ -27,6 +27,7 @@ class App extends React.Component {
     console.log(ev);
     this.setState({ filterSearch: ev });
   }
+
   renderCharacterDetail(props) {
     console.log(props);
     const routeCharacterId = props.match.params.id;
@@ -59,14 +60,17 @@ class App extends React.Component {
     });
     return (
       <div>
-        <img className='character_img' src={Logo} alt='Rick and Morty' />
-        <Filter
-          getValueFromSearch={this.getValueFromSearch}
-          filterSearch={this.state.filterSearch}
-        />
         <Switch>
           <Route exact path='/'>
-            <CharacterList list={Character} />
+            <Header />
+            <Filter
+              getValueFromSearch={this.getValueFromSearch}
+              filterSearch={this.state.filterSearch}
+            />
+            <CharacterList
+              list={Character}
+              filterSearch={this.state.filterSearch}
+            />
           </Route>
           <Route path='/character/:id' render={this.renderCharacterDetail} />
         </Switch>
