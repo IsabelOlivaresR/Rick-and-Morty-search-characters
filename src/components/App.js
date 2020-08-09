@@ -13,9 +13,13 @@ class App extends React.Component {
     this.state = {
       characters: [],
       filterSearch: '',
+      isHumanChecked: false,
+      isAlienChecked: false,
     };
     this.getValueFromSearch = this.getValueFromSearch.bind(this);
     this.renderCharacterDetail = this.renderCharacterDetail.bind(this);
+    this.getOnlyHuman = this.getOnlyHuman.bind(this);
+    this.getOnlyAlien = this.getOnlyAlien.bind(this);
   }
   componentDidMount() {
     getDataFromApi().then((responseData) => {
@@ -27,6 +31,20 @@ class App extends React.Component {
   getValueFromSearch(ev) {
     console.log(ev);
     this.setState({ filterSearch: ev });
+  }
+  getOnlyHuman(ev) {
+    this.setState((prevState) => {
+      return {
+        isHumanChecked: !prevState.isHumanChecked,
+      };
+    });
+  }
+  getOnlyAlien(ev) {
+    this.setState((prevState) => {
+      return {
+        isAlienChecked: !prevState.isAlienChecked,
+      };
+    });
   }
 
   renderCharacterDetail(props) {
@@ -53,7 +71,6 @@ class App extends React.Component {
   render() {
     console.log(this.state.characters);
     const Character = this.state.characters
-      .sort((a, b) => (a > b ? 1 : a < b ? -1 : 0))
       .filter((character) => {
         if (this.state.filterSearch !== '') {
           return character.name
@@ -62,7 +79,22 @@ class App extends React.Component {
         } else {
           return true;
         }
+      })
+      .filter((character) => {
+        if (this.state.isHumanChecked === true) {
+          return character.species.includes('Human');
+        } else {
+          return true;
+        }
+      })
+      .filter((character) => {
+        if (this.state.isAlienChecked === true) {
+          return character.species.includes('Alien');
+        } else {
+          return true;
+        }
       });
+
     return (
       <div>
         <Switch>
@@ -71,6 +103,10 @@ class App extends React.Component {
             <Filter
               getValueFromSearch={this.getValueFromSearch}
               filterSearch={this.state.filterSearch}
+              getOnlyHuman={this.getOnlyHuman}
+              isHumanChecked={this.state.isHumanChecked}
+              getOnlyAlien={this.getOnlyAlien}
+              isAlienChecked={this.state.isAlienChecked}
             />
             <CharacterList
               list={Character}

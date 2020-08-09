@@ -18,6 +18,8 @@
 .form {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 
   &__searchBar {
@@ -26,7 +28,8 @@
     font-family: 'Creepster', cursive;
     text-align: center;
     border: 1px solid #26f730;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-right: 10px;
     @media all and (min-width: 768px) {
       width: 400px;
       height: 50px;
@@ -35,6 +38,15 @@
       width: 600px;
       height: 60px;
     }
+  }
+  .filter_icons {
+    width: 30px;
+  }
+  .humanFilter,
+  .alienFilter {
+    width: 25px;
+    height: 25px;
+    margin: 0 15px 30px 5px;
   }
 }
 
@@ -151,6 +163,7 @@
   &__name {
     font-size: 30px;
     color: #26f730;
+    text-align: center;
     &:hover {
       color: #2a8002;
     }
@@ -165,11 +178,13 @@
     font-size: 20px;
     color: white;
     text-align: center;
+    font-family: 'Recursive', sans-serif;
+    text-transform: uppercase;
     @media all and (min-width: 768px) {
       font-size: 40px;
     }
     @media all and (min-width: 1200px) {
-      font-size: 55px;
+      font-size: 50px;
     }
   }
   &__icon {
