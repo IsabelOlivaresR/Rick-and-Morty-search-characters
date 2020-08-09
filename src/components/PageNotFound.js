@@ -8,6 +8,7 @@ class PageNotFound extends React.Component {
     return (
       <div className='PNF_container'>
         <div className='pageNotFound'>
+          <p className='errorMessage'>404 NOT FOUND</p>
           <Link to={'/'}>
             <span className='pageNotFound__return'>
               <i className='fas fa-long-arrow-alt-left'></i> Back
@@ -18,9 +19,7 @@ class PageNotFound extends React.Component {
             src={NotFound}
             alt='Page not found'
           />
-          <p className='pageNotFound__alert'>
-            "El personaje que buscas no existe".
-          </p>
+          <p className='pageNotFound__alert'>"This character doesn't exist".</p>
         </div>
       </div>
     );

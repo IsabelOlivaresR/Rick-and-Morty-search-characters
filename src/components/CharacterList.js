@@ -29,8 +29,8 @@ const CharacterList = (props) => {
         <ul className='characters__container'>{character}</ul>
       ) : (
         <p className='searchAlert'>
-          No hay ningún personaje que coincida con la palabra "
-          {props.filterSearch}"
+          There are no characters matching the search term "{props.filterSearch}
+          "
         </p>
       )}
     </div>

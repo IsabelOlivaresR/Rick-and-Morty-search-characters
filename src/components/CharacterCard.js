@@ -15,7 +15,7 @@ class CharacterCard extends React.Component {
         <img
           className='characterCard__species'
           src={this.props.item.species === 'Human' ? [Human] : [Alien]}
-          alt='holi'
+          alt={this.props.item.species === 'Human' ? 'Human' : 'Alien'}
         />
       </div>
     );

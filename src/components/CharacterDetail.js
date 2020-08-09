@@ -24,7 +24,7 @@ class CharacterDetail extends React.Component {
           <img
             className='characterDetail__icon'
             src={this.props.species === 'Human' ? [Human] : [Alien]}
-            alt='holi'
+            alt={this.props.species === 'Human' ? 'Human' : 'Alien'}
           />
           <p className='characterDetail__paragraph'>
             Origin: {this.props.origin.name}
