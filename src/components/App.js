@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
+import PageNotFound from './PageNotFound';
 import Filter from './Filter';
 import getDataFromApi from '../services/data';
 import { Route, Switch } from 'react-router-dom';
@@ -34,30 +35,34 @@ class App extends React.Component {
     const characterInfo = this.state.characters.find(
       (character) => character.id === parseInt(routeCharacterId)
     );
-    console.log(characterInfo);
-    return (
-      <CharacterDetail
-        name={characterInfo.name}
-        image={characterInfo.image}
-        species={characterInfo.species}
-        origin={characterInfo.origin}
-        episode={characterInfo.episode}
-        status={characterInfo.status}
-      />
-    );
+    if (characterInfo) {
+      return (
+        <CharacterDetail
+          name={characterInfo.name}
+          image={characterInfo.image}
+          species={characterInfo.species}
+          origin={characterInfo.origin}
+          episode={characterInfo.episode}
+          status={characterInfo.status}
+        />
+      );
+    } else {
+      return <PageNotFound />;
+    }
   }
-
   render() {
     console.log(this.state.characters);
-    const Character = this.state.characters.filter((character) => {
-      if (this.state.filterSearch !== '') {
-        return character.name
-          .toUpperCase()
-          .includes(this.state.filterSearch.toUpperCase());
-      } else {
-        return true;
-      }
-    });
+    const Character = this.state.characters
+      .sort((a, b) => (a > b ? 1 : a < b ? -1 : 0))
+      .filter((character) => {
+        if (this.state.filterSearch !== '') {
+          return character.name
+            .toUpperCase()
+            .includes(this.state.filterSearch.toUpperCase());
+        } else {
+          return true;
+        }
+      });
     return (
       <div>
         <Switch>

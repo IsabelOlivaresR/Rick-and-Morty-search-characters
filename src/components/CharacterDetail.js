@@ -10,7 +10,9 @@ class CharacterDetail extends React.Component {
     return (
       <div className='character_container'>
         <Link to={'/'}>
-          <i className='fas fa-undo'></i>
+          <span className='pageNotFound__return'>
+            <i className='fas fa-long-arrow-alt-left'></i> Back
+          </span>
         </Link>
         <div className='characterDetail'>
           <img
