@@ -167,12 +167,12 @@
   align-items: center;
   justify-content: space-evenly;
   @media all and (min-width: 768px) {
-    width: 550px;
-    height: 700px;
+    width: 400px;
+    height: 520px;
   }
   @media all and (min-width: 1200px) {
-    width: 650px;
-    height: 800px;
+    width: 500px;
+    height: 620px;
   }
 
   &__img {
@@ -182,10 +182,10 @@
       opacity: 0.5;
     }
     @media all and (min-width: 768px) {
-      width: 300px;
+      width: 220px;
     }
     @media all and (min-width: 1200px) {
-      width: 350px;
+      width: 250px;
     }
   }
   &__name {
@@ -196,10 +196,10 @@
       color: #2a8002;
     }
     @media all and (min-width: 768px) {
-      font-size: 55px;
+      font-size: 40px;
     }
     @media all and (min-width: 1200px) {
-      font-size: 65px;
+      font-size: 50px;
     }
   }
   &__paragraph {
@@ -209,19 +209,19 @@
     font-family: $font-secondary;
     text-transform: uppercase;
     @media all and (min-width: 768px) {
-      font-size: 40px;
+      font-size: 30px;
     }
     @media all and (min-width: 1200px) {
-      font-size: 45px;
+      font-size: 40px;
     }
   }
   &__icon {
     width: 40px;
     @media all and (min-width: 768px) {
-      width: 65px;
+      width: 50px;
     }
     @media all and (min-width: 1200px) {
-      font-size: 80px;
+      font-size: 65px;
     }
   }
 }
