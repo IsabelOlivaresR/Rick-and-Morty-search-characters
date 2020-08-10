@@ -1,22 +1,29 @@
 {
   "files": {
-    "main.css": "./static/css/main.27c1270b.chunk.css",
-    "main.js": "./static/js/main.1c334009.chunk.js",
-    "main.js.map": "./static/js/main.1c334009.chunk.js.map",
+    "main.css": "./static/css/main.704ac2f2.chunk.css",
+    "main.js": "./static/js/main.3f8ab1ca.chunk.js",
+    "main.js.map": "./static/js/main.3f8ab1ca.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.8bb1f59a.js",
     "runtime-main.js.map": "./static/js/runtime-main.8bb1f59a.js.map",
-    "static/js/2.c5f35a4a.chunk.js": "./static/js/2.c5f35a4a.chunk.js",
-    "static/js/2.c5f35a4a.chunk.js.map": "./static/js/2.c5f35a4a.chunk.js.map",
+    "static/js/2.a79f5abf.chunk.js": "./static/js/2.a79f5abf.chunk.js",
+    "static/js/2.a79f5abf.chunk.js.map": "./static/js/2.a79f5abf.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.0ead088acce7764a6bd73b9f05c8a5b5.js": "./precache-manifest.0ead088acce7764a6bd73b9f05c8a5b5.js",
+    "precache-manifest.81d2221627a936d08202fea736bd3114.js": "./precache-manifest.81d2221627a936d08202fea736bd3114.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.27c1270b.chunk.css.map": "./static/css/main.27c1270b.chunk.css.map",
-    "static/js/2.c5f35a4a.chunk.js.LICENSE.txt": "./static/js/2.c5f35a4a.chunk.js.LICENSE.txt"
+    "static/css/main.704ac2f2.chunk.css.map": "./static/css/main.704ac2f2.chunk.css.map",
+    "static/js/2.a79f5abf.chunk.js.LICENSE.txt": "./static/js/2.a79f5abf.chunk.js.LICENSE.txt",
+    "static/media/NotFound.jpg": "./static/media/NotFound.63565465.jpg",
+    "static/media/Rick_and_Morty_-_logo_(English).png": "./static/media/Rick_and_Morty_-_logo_(English).75509f2e.png",
+    "static/media/alien.png": "./static/media/alien.8756e556.png",
+    "static/media/main.scss": "./static/media/espacio3.a64abdbc.jpg",
+    "static/media/human.png": "./static/media/human.af8d24e5.png",
+    "static/media/rip.png": "./static/media/rip.c92f4174.png",
+    "static/media/spaceship.png": "./static/media/spaceship.5b249f9f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8bb1f59a.js",
-    "static/js/2.c5f35a4a.chunk.js",
-    "static/css/main.27c1270b.chunk.css",
-    "static/js/main.1c334009.chunk.js"
+    "static/js/2.a79f5abf.chunk.js",
+    "static/css/main.704ac2f2.chunk.css",
+    "static/js/main.3f8ab1ca.chunk.js"
   ]
 }

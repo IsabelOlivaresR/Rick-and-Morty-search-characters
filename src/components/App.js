@@ -29,7 +29,6 @@ class App extends React.Component {
     });
   }
   getValueFromSearch(ev) {
-    console.log(ev);
     this.setState({ filterSearch: ev });
   }
   getOnlyHuman(ev) {
@@ -48,7 +47,6 @@ class App extends React.Component {
   }
 
   renderCharacterDetail(props) {
-    console.log(props);
     const routeCharacterId = props.match.params.id;
     const characterInfo = this.state.characters.find(
       (character) => character.id === parseInt(routeCharacterId)
@@ -69,7 +67,6 @@ class App extends React.Component {
     }
   }
   render() {
-    console.log(this.state.characters);
     const Character = this.state.characters
       .filter((character) => {
         if (this.state.filterSearch !== '') {

@@ -1,9 +1,10 @@
 import React from 'react';
 import Human from '../images/human.png';
 import Alien from '../images/alien.png';
+import PropTypes from 'prop-types';
+
 class CharacterCard extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <div className='characterCard'>
         <img
@@ -21,5 +22,9 @@ class CharacterCard extends React.Component {
     );
   }
 }
-
+CharacterCard.propTypes = {
+  image: PropTypes.string,
+  name: PropTypes.string,
+  species: PropTypes.string,
+};
 export default CharacterCard;

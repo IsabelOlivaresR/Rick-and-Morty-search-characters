@@ -22,7 +22,7 @@ const CharacterList = (props) => {
         </li>
       );
     });
-  console.log(props);
+
   return (
     <div>
       {character.length !== 0 ? (

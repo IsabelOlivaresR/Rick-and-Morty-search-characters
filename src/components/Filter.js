@@ -1,6 +1,7 @@
 import React from 'react';
 import Human from '../images/human.png';
 import Alien from '../images/alien.png';
+import PropTypes from 'prop-types';
 
 class Filter extends React.Component {
   constructor(props) {
@@ -21,7 +22,6 @@ class Filter extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <form className='form' onSubmit={(event) => event.preventDefault()}>
         <input
@@ -39,7 +39,7 @@ class Filter extends React.Component {
           <input
             type='Checkbox'
             className='humanFilter'
-            onClick={this.getOnlyHumanChild}
+            onChange={this.getOnlyHumanChild}
             checked={this.props.isHumanChecked}
           />
           <label>
@@ -48,7 +48,7 @@ class Filter extends React.Component {
           <input
             type='Checkbox'
             className='alienFilter'
-            onClick={this.getOnlyAlienChild}
+            onChange={this.getOnlyAlienChild}
             checked={this.props.isAlienChecked}
           />
         </div>
@@ -56,5 +56,14 @@ class Filter extends React.Component {
     );
   }
 }
+
+Filter.propTypes = {
+  getValueFromSearch: PropTypes.func,
+  filterSearch: PropTypes.string,
+  getOnlyAlien: PropTypes.func,
+  getOnlyHuman: PropTypes.func,
+  isHumanChecked: PropTypes.bool,
+  isAlienChecked: PropTypes.bool,
+};
 
 export default Filter;

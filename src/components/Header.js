@@ -4,7 +4,6 @@ import Spaceship from '../images/spaceship.png';
 
 class Header extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <div className='header'>
         <img className='header__animation' src={Spaceship} alt='spaceship' />

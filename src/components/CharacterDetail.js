@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import Human from '../images/human.png';
 import Alien from '../images/alien.png';
 import Dead from '../images/rip.png';
+import PropTypes from 'prop-types';
 
 class CharacterDetail extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <div className='character_container'>
         <Link to={'/'}>
@@ -44,5 +44,14 @@ class CharacterDetail extends React.Component {
     );
   }
 }
+
+CharacterDetail.propTypes = {
+  image: PropTypes.string,
+  name: PropTypes.string,
+  species: PropTypes.string,
+  origin: PropTypes.object,
+  episode: PropTypes.array,
+  status: PropTypes.string,
+};
 
 export default CharacterDetail;
