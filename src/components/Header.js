@@ -6,7 +6,13 @@ class Header extends React.Component {
   render() {
     return (
       <div className='header'>
-        <img className='header__animation' src={Spaceship} alt='spaceship' />
+        <div className='header__animation'>
+          <img
+            className='header__animation__img'
+            src={Spaceship}
+            alt='spaceship'
+          />
+        </div>
         <img className='header__img' src={Logo} alt='Rick and Morty' />
       </div>
     );

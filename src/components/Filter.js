@@ -22,13 +22,14 @@ class Filter extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <form className='form' onSubmit={(event) => event.preventDefault()}>
         <input
           type='text'
           name='search'
           className='form__searchBar'
-          placeholder='"Summer Smith"'
+          placeholder='Summer Smith'
           value={this.props.filterSearch}
           onChange={this.getValueFromSearchChild}
         />

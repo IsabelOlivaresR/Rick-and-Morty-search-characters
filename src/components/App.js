@@ -28,6 +28,7 @@ class App extends React.Component {
       });
     });
   }
+
   getValueFromSearch(ev) {
     this.setState({ filterSearch: ev });
   }
@@ -77,6 +78,7 @@ class App extends React.Component {
           return true;
         }
       })
+
       .filter((character) => {
         if (this.state.isHumanChecked === true) {
           return character.species.includes('Human');

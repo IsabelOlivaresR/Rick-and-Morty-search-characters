@@ -21,16 +21,19 @@
     }
   }
   &__animation {
-    width: 100px;
+    width: 100%;
     align-self: flex-start;
     animation-duration: 10s;
     animation-name: slideIn;
     animation-iteration-count: infinite;
-    @media all and (min-width: 768px) {
-      width: 150px;
-    }
-    @media all and (min-width: 1200px) {
-      width: 220px;
+    &__img {
+      width: 100px;
+      @media all and (min-width: 768px) {
+        width: 150px;
+      }
+      @media all and (min-width: 1200px) {
+        width: 220px;
+      }
     }
   }
 }
@@ -98,6 +101,7 @@
 .characterCard_container {
   border-radius: 50%;
   margin-bottom: 30px;
+  border: solid 3px transparent;
   &:hover {
     border: solid 3px $color-dark;
   }
@@ -324,10 +328,10 @@
 //animation
 @keyframes slideIn {
   from {
-    margin-left: 0%;
+    transform: translateX(0);
   }
 
   to {
-    margin-left: 100%;
+    transform: translateX(100%);
   }
 }
